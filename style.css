@@ -210,7 +210,7 @@ body {
 
 /* Investor type */
 .investor-type__radio__wrapper {
-	padding-left: 10px;
+	padding-left: 20px;
 }
 
 .investor-type {
@@ -242,8 +242,8 @@ body {
 .investor-type__radio input[type='radio']::before {
 	position: absolute;
 	content: '';
-	width: 10px;
-	height: 10px;
+	width: 20px;
+	height: 20px;
 	transform: translateY(-100%);
 	left: -20px;
 	border: 1px solid var(--tip-clr);
