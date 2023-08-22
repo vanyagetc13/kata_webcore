@@ -1,0 +1,299 @@
+/* Font import*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;400&display=swap');
+
+/* Root (variables) */
+:root {
+	--bg-clr: #eff6ff;
+	--text-clr: #2a4a5c;
+	--fb-clr: #255a9b;
+	--in-clr: #0076b6;
+	--accent-clr: #3698fb;
+	--white-clr: #fff;
+
+	--tip-clr: #7b8a92;
+}
+
+/* some defaults */
+html {
+	width: 100vw;
+	width: 100dvw;
+
+	height: 100vh;
+	height: 100dvh;
+
+	/* Font settings :D */
+	font-family: 'Barlow', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: var(--text-clr);
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Main part */
+
+body {
+	background-color: var(--bg-clr);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main {
+	width: 90%;
+	height: 85%;
+	display: flex;
+	background-color: var(--white-clr);
+}
+/* bg-image (left side) */
+.bg-image__wrapper {
+	position: relative;
+}
+
+.bg-image {
+	height: 100%;
+	overflow: hidden;
+}
+
+.bg-image__wrapper::before {
+	content: '';
+	width: 100px;
+	height: 50px;
+	background-image: url('./img/logo.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	position: absolute;
+	top: 20px;
+	left: 35px;
+	z-index: 10;
+}
+
+/* helpers for text */
+.tip {
+	font-size: 0.9em;
+	color: var(--tip-clr);
+}
+/* Registration section (right side) */
+.registration__header {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.registration {
+	font-size: 20px;
+	display: flex;
+	align-self: center;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
+	width: 100%;
+	padding: 0 5%;
+}
+
+.registration__title {
+	font-size: 1.1em;
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+
+/* Buttons */
+
+.fb_btn {
+	background-color: var(--fb-clr);
+}
+.in_btn {
+	background-color: var(--in-clr);
+}
+
+.logo {
+	width: 20px;
+	height: 20px;
+}
+
+.registration__buttons {
+	display: flex;
+	gap: 50px;
+	justify-content: space-between;
+	align-self: center;
+	margin-top: 40px;
+	font-size: 12px;
+	color: var(--white-clr);
+	width: 100%;
+}
+
+.registration__btn {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	gap: 10px;
+	padding: 12px 35px 12px 10px;
+	border-width: 0;
+	color: inherit;
+	cursor: pointer;
+}
+.registration__btn > div {
+	padding-top: 2px;
+}
+
+/* Devider */
+
+.or__devider {
+	font-size: 0.55em;
+	position: relative;
+}
+
+.or__devider::after,
+.or__devider::before {
+	content: '';
+	position: absolute;
+	background-color: #afafaf;
+	height: 1px;
+	width: 100px;
+	top: 50%;
+	opacity: 0.6;
+}
+
+.or__devider::before {
+	left: -110px;
+}
+
+.or__devider::after {
+	right: -110px;
+}
+
+/* Text-field */
+.registration__fields {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	gap: 50px;
+}
+.text-field {
+	position: relative;
+	border: 1px solid var(--tip-clr);
+	flex: 1;
+}
+
+.text-input {
+	border-width: 0;
+	outline: none;
+	padding: 20px 10px 10px;
+	color: inherit;
+	width: 100%;
+}
+
+.text-field .text-input:focus {
+	border-left: 1px solid var(--accent-clr);
+}
+
+.text-field__label {
+	position: absolute;
+	top: 5px;
+	left: 10px;
+	font-size: 0.55em;
+	color: var(--tip-clr);
+}
+
+/* Investor type */
+.investor-type__radio__wrapper {
+	padding-left: 10px;
+}
+
+.investor-type {
+	width: 100%;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	font-size: 16px;
+}
+
+.investor-type__title {
+	font-size: 1.2em;
+	margin-bottom: 0.8em;
+}
+
+.investor-type__radio {
+	display: flex;
+	gap: 50px;
+	list-style: none;
+}
+
+.investor-type__radio input[type='radio'] {
+	appearance: none;
+	position: relative;
+}
+
+.investor-type__radio input[type='radio']::before {
+	position: absolute;
+	content: '';
+	width: 10px;
+	height: 10px;
+	transform: translateY(-100%);
+	left: -20px;
+	border: 1px solid var(--tip-clr);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 1ms;
+}
+
+.investor-type__radio input[type='radio']:checked:before {
+	border: 3px solid var(--accent-clr);
+}
+
+.investor-type__radio__item > label {
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+/* tip card */
+.investor-type__tip-card {
+	padding: 20px;
+	border-radius: 10px;
+	width: 50%;
+	font-size: 1.05em;
+	box-shadow: -15px 15px 15px rgba(238, 238, 238, 0.5); /* #eee with alpha */
+}
+
+/* Submiting Registration */
+.submitting {
+	width: 100%;
+}
+
+.submitting__agreement {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.submitting__agreement__text {
+	font-size: 0.8em;
+}
+
+.submit-btn {
+	margin-top: 60px;
+	padding: 10px 60px;
+	background-color: var(--accent-clr);
+	color: var(--white-clr);
+	font-size: 1.2rem;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	font-weight: 600;
+	cursor: pointer;
+}

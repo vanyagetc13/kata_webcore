@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>iintoo</title>
+</head>
+
+<body>
+	<main class='main'>
+		<div class="bg-image__wrapper">
+			<img src="./img/bg.jpg" alt="BG" class='bg-image' />
+		</div>
+		<form onsubmit='submitForm(event)' name='Registration' id='registration_form' class='registration'>
+			<div class='registration__header'>
+				<h2 class='registration__title'>Get iintoo it today</h2>
+				<p class='tip'>There is no charge or obligation upon registration.</p>
+				<div class='registration__buttons'>
+					<button class='fb_btn registration__btn'>
+						<img src='./img/facebook.svg' alt='fb_logo' class='logo' />
+						<div>Register with Facebook</div>
+					</button>
+					<button class='in_btn registration__btn'>
+						<img src='./img/linkedin.svg' alt='in_logo' class='logo'>
+						<div>Register with LinkedIn</div>
+					</button>
+				</div>
+			</div>
+			<div class='or__devider'>OR</div>
+			<div class='registration__fields'>
+				<div class='text-field'>
+					<input type="text" class='text-input' />
+					<label class='text-field__label'>Email</label>
+				</div>
+				<div class='text-field'>
+					<input type="text" class='text-input' />
+					<label class='text-field__label'>Phone</label>
+				</div>
+			</div>
+			<section class='investor-type'>
+				<div class='investor-type__header'>
+					<h3 class='investor-type__title'>What type of investor are you?</h3>
+					<p class='tip'>Select the type of investor you are below.</p>
+				</div>
+				<div class='investor-type__radio__wrapper'>
+					<ul class='investor-type__radio'>
+						<li class='investor-type__radio__item'>
+							<label for='Individual'><input type="radio" name="investor-type" id="Individual"
+									checked>Individual</label>
+						</li>
+						<li class='investor-type__radio__item'>
+							<label for='Business'><input type="radio" name="investor-type"
+									id="Business">Business</label>
+						</li>
+						<li class='investor-type__radio__item'>
+							<label for='IRA'><input type="radio" name="investor-type" id="IRA">IRA</label>
+						</li>
+						<li class='investor-type__radio__item'>
+							<label for='Trust'><input type="radio" name="investor-type" id="Trust">Trust</label>
+						</li>
+					</ul>
+				</div>
+				<div class='investor-type__tip-card'>
+					<div class='tip'>
+						I am a natural person investing on my own behalf as a sole owner, joint tenant, or tenant in
+						common.
+					</div>
+				</div>
+			</section>
+			<section class="submitting">
+				<div class='submitting__agreement'>
+					<input type="checkbox" name="agreement" id="notification_cb">
+					<div class='submitting__agreement__text'>
+						I agree to the terms and receiving notifications from iintoo <a href='#terms'>View full
+							terms</a>
+					</div>
+				</div>
+				<button type='submit' class='submit-btn'>
+					Create Account
+				</button>
+			</section>
+		</form>
+	</main>
+</body>
+<script defer src="./code.js"></script>
+
+</html>
