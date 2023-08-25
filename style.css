@@ -96,7 +96,7 @@ body {
 	align-items: center;
 	gap: 50px;
 	width: 100%;
-	padding: 0 5%;
+	padding: 10px 30px;
 }
 
 .registration__title {
@@ -318,10 +318,16 @@ body {
 
 /* Adaptiveness */
 
-/* Tablets and laptops <= 1024px */
+@media screen and (max-height: 899px) and (min-width: 1201px) {
+	.registration {
+		overflow: scroll;
+		height: 100%;
+	}
+}
+
 @media (max-width: 1200px) {
 	body {
-		overflow: hidden;
+		overflow: auto;
 	}
 	.main {
 		width: 100%;
@@ -380,8 +386,16 @@ body {
 	}
 }
 
-/* Mobiles width <= 480px */
-@media (max-width: 480px) {
+@media (max-width: 900px) {
+	@media (min-width: 481px) {
+		.registration__buttons,
+		.registration__fields {
+			flex-direction: row;
+		}
+	}
+	.registration {
+		padding: 0;
+	}
 	body {
 		background-image: url('./img/bg.jpg');
 		display: flex;
